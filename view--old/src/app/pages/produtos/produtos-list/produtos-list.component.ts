@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router }  from '@angular/router';
 
 @Component({
-  moduleId: module.id,
-  selector: 'app-produtos-list',
+  selector: 'produtos-list',
   templateUrl: './produtos-list.component.html',
   styleUrls: ['./produtos-list.component.css']
 })
