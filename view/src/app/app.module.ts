@@ -8,6 +8,7 @@ import { ProdutosListComponent } from './produtos/produtos-list/produtos-list.co
 import { AppRoutingModule } from './app.routing';
 import { ProdutoListRouting } from './produtos/produtos.routing';
 
+
 @NgModule({
   declarations: [
     AppComponent,
