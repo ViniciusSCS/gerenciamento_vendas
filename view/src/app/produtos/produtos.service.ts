@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { HttpModule, Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
 import { Produtos } from './produtos';
 
+@Injectable()
 export class ProdutosService {
     private produtosUrl = "http://localhost:8000/produtos";
 

@@ -8,7 +8,8 @@ import { ProdutosService } from '../produtos.service';
 @Component({
   selector: 'produtos-list',
   templateUrl: './produtos-list.component.html',
-  styleUrls: ['./produtos-list.component.css']
+  styleUrls: ['./produtos-list.component.css'],
+  providers: [ProdutosService]
 })
 export class ProdutosListComponent implements OnInit {
   produtos: Produtos[];
