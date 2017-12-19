@@ -6,14 +6,14 @@ import { Produtos } from './produtos';
 
 @Injectable()
 export class ProdutosService {
-    private produtosUrl = "http://localhost:8000/produtos";
+    private produtosUrl = "http://localhost:8000/api/produtos";
 
     constructor(
         private http: Http
     ) { }
 
     /**
-     * Pega todas os produtos
+     * Lista todos os produtos
      */
     getProdutos(): Observable<Produtos[]> {
         return this.http.get(this.produtosUrl).map((response: Response) => <Produtos[]>response.json()).catch(this.handleError);
