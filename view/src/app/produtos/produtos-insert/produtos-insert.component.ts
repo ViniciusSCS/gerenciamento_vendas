@@ -36,7 +36,7 @@ export class ProdutosInsertComponent implements OnInit {
   }
 
   goToshow(produtos: Produtos):void {
-    let link = ['/produtos/cadastrar', produtos.id];
+    let link = ['/produtos/cadastrar'];
     this.router.navigate(link);
   }
 

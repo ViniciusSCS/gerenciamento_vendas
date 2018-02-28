@@ -23,6 +23,12 @@ export class ProdutosService {
         return this.http.get(this.produtosUrl + "produtos/cadastrar").map((response: Response) => <Produtos[]>response.json()).catch(this.handleError);
     }
 
+    salvar(produto) {
+        this.http.post(this.produtosUrl + "produtos/cadastrar", produto).subscribe(response => {
+            this.produtosUrl + "produtos";
+        });
+      }
+
     //Mostrando os erros
     private handleError(error: Response | any) {
         // In a real world app, we might use a remote logging infrastructure
