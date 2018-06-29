@@ -1,6 +1,6 @@
 <section class="row">
   <div class="col-md-12">
-    <h1>Listagem de produtos</h1>
+    <h1>Cadastro de produtos</h1>
     <form>
       <div class="row">
         <div class="col-md-6">
@@ -10,7 +10,7 @@
           </div>
 
           <div class="form-group">
-            <label for="preco">Preço</label>
+            <label for="preco">Preço:</label>
             <input type="text" class="form-control" id="preco" maxlength="10" formControlName="price" placeholder="Preço do produto">
           </div>
 
@@ -21,6 +21,7 @@
 
           <div class="form-group">
             <button type="submit" class="btn btn-success">Salvar</button>
+            <button class="btn btn-default" (click)="goBack()">Voltar</button>
           </div>
         </div>
       </div>

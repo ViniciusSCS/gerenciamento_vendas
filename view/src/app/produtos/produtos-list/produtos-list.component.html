@@ -1,30 +1,10 @@
 <section class="row">
   <div class="col-md-12">
     <h1>Listagem de produtos</h1>
-    <form >
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" maxlength="30" formControlName="name" placeholder="Nome do produto" required>
-          </div>
 
-          <div class="form-group">
-            <label for="preco">Preço</label>
-            <input type="number" class="form-control" id="preco" min="1" formControlName="price" placeholder="Preço do produto" required>
-          </div>
-
-          <div class="form-group">
-            <label for="descricao">Descrição:</label>
-            <input type="text" class="form-control" id="descricao" maxlength="50" formControlName="description" placeholder="Descrição do produto" required>
-          </div>
-
-          <div class="form-group">
-            <button type="submit" class="btn btn-success">Salvar</button>
-          </div>
-        </div>
-      </div>
-    </form>
+    <div class="form-group">
+      <a (click)="redirect()" class="btn btn-success">Novo</a>
+    </div>
 
     <table class="table table-bordered">
       <thead>
@@ -37,6 +17,9 @@
         </tr>
       </thead>
       <tbody>
+        <tr *ngIf="produtos == 0">
+          <td colspan="5" align="center">Nenhuma informação encontrada</td>
+        </tr>
         <tr *ngFor="let prod of produtos">
           <th> {{ prod.id }} </th>
           <td> {{ prod.name }} </td>

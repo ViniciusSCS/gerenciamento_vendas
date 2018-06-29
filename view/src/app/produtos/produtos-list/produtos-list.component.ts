@@ -8,8 +8,6 @@ import { ProdutosService } from '../produtos.service';
 @Component({
   selector: 'produtos-list',
   templateUrl: './produtos-list.component.html',
-  styleUrls: ['./produtos-list.component.css'],
-  providers: [ProdutosService]
 })
 export class ProdutosListComponent implements OnInit {
   produtos: Produtos[];
@@ -22,8 +20,7 @@ export class ProdutosListComponent implements OnInit {
   ) {}
 
   ngOnInit(){
-    let timer = Observable.timer(0,5000);
-    timer.subscribe(() => this.getProdutos());
+    this.getProdutos();
   }
   
   getProdutos(){
@@ -35,6 +32,11 @@ export class ProdutosListComponent implements OnInit {
 
   goToshow(produtos: Produtos):void {
     let link = ['/produtos', produtos.id];
+    this.router.navigate(link);
+  }
+
+  redirect(): void {
+    let link = ['/produtos/novo'];
     this.router.navigate(link);
   }
 

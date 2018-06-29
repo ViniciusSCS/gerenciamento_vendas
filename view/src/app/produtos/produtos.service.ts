@@ -20,11 +20,11 @@ export class ProdutosService {
     }
 
     getProdutosInsert(): Observable<Produtos[]> {
-        return this.http.get(this.produtosUrl + "produtos/cadastrar").map((response: Response) => <Produtos[]>response.json()).catch(this.handleError);
+        return this.http.get(this.produtosUrl + "produtos/novo").map((response: Response) => <Produtos[]>response.json()).catch(this.handleError);
     }
 
     salvar(produto) {
-        this.http.post(this.produtosUrl + "produtos/cadastrar", produto).subscribe(response => {
+        this.http.post(this.produtosUrl + "produtos/novo", produto).subscribe(response => {
             this.produtosUrl + "produtos";
         });
       }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProdutosListComponent } from './produtos/produtos-list/produtos-list.component';
 
 import { AppRoutingModule } from './app.routing';
+import { ProdutosModule } from './produtos/produtos.module';
 import { ProdutoListRouting } from './produtos/produtos.routing';
 import { ProdutosInsertComponent } from './produtos/produtos-insert/produtos-insert.component';
 
@@ -13,14 +14,12 @@ import { ProdutosInsertComponent } from './produtos/produtos-insert/produtos-ins
 @NgModule({
   declarations: [
     AppComponent,
-    ProdutosListComponent,
-    ProdutosInsertComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule,
+    ProdutosModule,
     AppRoutingModule,
-    ProdutoListRouting,
-    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
