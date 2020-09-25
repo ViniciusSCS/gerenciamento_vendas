@@ -28,6 +28,6 @@ $factory->define(App\Produtos::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'description' => $faker->word,
-        'value' => $faker->randomFloat(2,10,3000),
+        'value' => $faker->randomFloat(2,10,300),
     ];
 });
